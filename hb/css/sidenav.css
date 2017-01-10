@@ -8,8 +8,8 @@
   left: 0;
   position: fixed;
   overflow: auto;
-  transform: translate(-262px, 0);
-  transition: transform .3s;
+  transform: translate(-1000px, 0);
+  transition: transform .5s;
   top: 0;
   width: 20%;
   z-index: 100; }
