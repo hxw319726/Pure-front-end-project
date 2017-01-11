@@ -26,3 +26,29 @@ html,body{
 	top:50px;
 	left: 30px;
 }
+.sidenav-search{
+	width:85%;
+	display: inline-block;
+	margin-left: 7%;
+}
+.sidenav-search input.search-input{
+	float: left;
+	width:80%;
+	line-height: 26px;
+	padding-left: 11px;
+	border:none;
+	
+}
+.sidenav-search span.search-icon{
+	display:block;
+	float: right;
+	width:15%;
+	line-height: 26px;
+	background: #00a8ff;
+	cursor: pointer;	
+}
+.sidenav-search span.search-icon i{
+	font-size: 19px;
+	margin-left: 8px;
+	color:#fff;
+}

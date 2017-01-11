@@ -1,5 +1,6 @@
 .sidenav {
   background: #212121;
+  opacity: 0.9;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
   display: block;
   font-size: 16px;
@@ -12,18 +13,19 @@
   transition: transform .5s;
   top: 0;
   width: 20%;
-  z-index: 100; }
-  .sidenav.show {
-    transform: translate(0, 0); }
+  z-index: 1000;
+}
+.sidenav.show {
+  transform: translate(0, 0); 
+}
 
 .sidenav-brand {
-  background: #FF5722;
-  border-bottom: 1px solid #FF7043;
-  color: #FAFAFA;
-  font-size: 24px;
+  color: #00a8ff;
+  font-size: 18px;
   font-weight: bold;
-  line-height: 32px;
-  padding: 20px 24px 19px; }
+  line-height: 72px;
+  text-align: center;
+ }
 
 .sidenav-header {
   background: transparent;
