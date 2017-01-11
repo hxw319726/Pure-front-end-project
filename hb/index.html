@@ -11,22 +11,69 @@
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<!--sidenav侧边栏样式-->
 	<link rel="stylesheet" href="./css/sidenav.css" type="text/css">
+	<!--sidenav侧边栏@media样式-->
+	<link rel="stylesheet" href="./css/example.css" type="text/css">
+	<!--city样式-->
+	<link rel="stylesheet" href="./css/city.css" type="text/css">
+	<!--地图加载-->
 	<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=5feca9bb1cd73e27d1465f4c2600c807"></script>
 	<script type="text/javascript" src="./js/jquery.js"></script>
+	<!--city选择器-->
+	<script type="text/javascript" src="./js/Popt.js"></script>
+	<script type="text/javascript" src="./js/cityJson.js"></script>
+	<script type="text/javascript" src="./js/citySet.js"></script>
 </head>
 <body >
 <div id="map"></div>
 <div class="container">
-	<div class="sidenav" id="sidenav"  data-sidenav data-sidenav-toggle="#sidenav-toggle">
-		<div class="sidenav-brand">湖北省地名查询公共服务系统</div>
-		<div class="sidenav-search">
-			<input class="search-input" type="text" name="title"  placeholder="请输入标题">
-			<span class="search-icon"><i ></i></span>
+	<div class="sidenav show" id="sidenav"  data-sidenav data-sidenav-toggle="#sidenav-toggle">
+		<div class="sidenav-center">
+			<div class="sidenav-brand"><span>湖北省地名查询公共服务系统</span></div>
+			<div class="sidenav-search">	
+				<input class="search-input" type="text" name="title" value="请输入标题"  placeholder="请输入标题">	
+				<span class="search-icon"><img src="./img/search-icon.png"></span>		
+			</div>
+			<div class="sidenav-switch">
+				<div class="switch-toponymy">地名查询</div><div class="switch-convenience">便民查询</div>
+			</div>
+			<div class="sidenav-select">
+				<div class="select-classify">
+					<input class="classify-input" type="text" placeholder="选择分类">
+					<div class="classify-toponymy">
+						<label class="toponymy-big">地名大类:
+							<select>
+								<option>111</option>
+								<option>222</option>
+								<option>333</option>
+								<option>444</option>
+							</select>
+						</label>
+						<label class="toponymy-small">地名小类:
+							<select>
+								<option>111</option>
+								<option>222</option>
+								<option>333</option>
+								<option>444</option>
+							</select>
+					</div>
+				</div>
+				<div class="select-word">
+					<input class="word-input" type="text" placeholder="输入地名关键字">
+					<div class="word-query">
+						<input class="query-input" type="text" >
+						<div class="query-toponymy">查询地名</div>
+					</div>
+				</div>
+				<div class="select-city" id="city" >
+					<input class="city-input" type="text" id="_city" placeholder="选择城市" />
+				</div>
+			</div>
 		</div>
 	</div>
 	<a href="javascript:;" class="toggle" id="sidenav-toggle">
   	<img class="material-icons" src="./img/logo.png">
 	</a>
+
 </div>
 	
 
@@ -38,7 +85,7 @@
 
 
 
-
+	<!--侧边js-->
 	<script src="./js/sidenav.js"></script>
 	<script type="text/javascript">
 	//地图初始化
@@ -49,6 +96,10 @@
 		});
 		//sidenav侧滑初始化
 		$('[data-sidenav]').sidenav();
+	//加载城市选择器
+	$("#_city").click(function (e) {
+		SelCity(this,e);
+	});
 	</script>
 </body>
 </html>
