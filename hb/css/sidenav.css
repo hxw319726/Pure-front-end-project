@@ -8,7 +8,7 @@
   height: 100%;
   left: 0;
   position: fixed;
-  overflow: scroll;
+  overflow-y:scroll;
   transform: translate(-1000px, 0);
   transition: transform .5s;
   top: 0;
@@ -40,6 +40,7 @@
   width:80%;
   height:26px;
   border:none;
+  color:#000;
   padding-left: 10px;
 }
 .sidenav .sidenav-center .sidenav-search .search-icon{
@@ -61,62 +62,67 @@
   height: 25px;
   text-align: center;
   background: #fff;
+  color:#000;
   line-height: 25px;
   font-size: 14px;
   margin-right: 10px;
   cursor: pointer;
 }
-.sidenav .sidenav-center .sidenav-select .classify-input{
+.sidenav .sidenav-center .sidenav-select-toponymy .classify-input{
   width:90%;
   height: 22px;
   border:1px solid #fff;
   background:inherit;
   padding-left: 10px;
+  color:#fff;
 }
-.sidenav .sidenav-center .sidenav-select .classify-toponymy label{
+.sidenav .sidenav-center .sidenav-select-toponymy .classify-toponymy label{
   display: block;
   color:#fff;
   margin-left: 10px;
   margin-top:8px;
   font-size: 14px;
 }
-.sidenav .sidenav-select .classify-toponymy label select{
+.sidenav .sidenav-select-toponymy .classify-toponymy label select{
   background: inherit;
   width:40%;
   height: 20px;
   color: #fff;
 }
-.sidenav .sidenav-select .classify-toponymy label select option{
+.sidenav .sidenav-select-toponymy .classify-toponymy label select option{
   color: #000;
+  background: #fff;
 }
-.sidenav .sidenav-center .sidenav-select .toponymy-big{
+.sidenav .sidenav-center .sidenav-select-toponymy .toponymy-big{
  
 }
-.sidenav .sidenav-center .sidenav-select .toponymy-small{
+.sidenav .sidenav-center .sidenav-select-toponymy .toponymy-small{
   
 }
-.sidenav .sidenav-center .sidenav-select .select-word{
+.sidenav .sidenav-center .sidenav-select-toponymy .select-word{
   margin:20px 0;
 }
-.sidenav .sidenav-center .sidenav-select .word-input{
+.sidenav .sidenav-center .sidenav-select-toponymy .word-input{
   width:90%;
   height: 22px;
   border:1px solid #fff;
   background:inherit;
+  color:#fff;
   padding-left: 10px;
 }
-.sidenav .sidenav-center .sidenav-select .word-query{
+.sidenav .sidenav-center .sidenav-select-toponymy .word-query{
   margin-left: 10px;
 }
-.sidenav .sidenav-center .sidenav-select .word-query .query-input{
+.sidenav .sidenav-center .sidenav-select-toponymy .word-query .query-input{
   width:65%;
   height: 18px;
   border:1px solid #fff;
   background:inherit;
+  color:#fff;
   padding-left: 10px;
   margin-top:10px;
 }
-.sidenav .sidenav-center .sidenav-select .word-query div.query-toponymy{
+.sidenav .sidenav-center .sidenav-select-toponymy .word-query div.query-toponymy{
   width:25%;
   height: 22px;
   text-align: center;
@@ -127,22 +133,48 @@
   cursor: pointer;
   margin-top:5px;
 }
-.sidenav .sidenav-center .sidenav-select .select-city{
+.sidenav .sidenav-center .sidenav-select-toponymy .select-city{
   position: relative;
 }
-.sidenav .sidenav-center .sidenav-select .select-city .city-input{
+.sidenav .sidenav-center .sidenav-select-toponymy .select-city .city-input{
   width:90%;
   height: 22px;
   border:1px solid #fff;
   background:inherit;
+  color:#fff;
   padding-left: 10px;
 }
-
-
-
-
-
-
+.sidenav .sidenav-center .sidenav-select-convenience table{
+  width:96%;
+  margin-top:25px;
+}
+.sidenav .sidenav-center .sidenav-select-convenience table tr{
+  line-height: 20px;
+}
+.sidenav .sidenav-center .sidenav-select-convenience table td{
+  /*border:1px solid #fff;*/
+  text-align: center;
+  color:#fff;
+  width: 25%;
+  vertical-align: bottom;
+}
+.sidenav .sidenav-center .sidenav-select-convenience table td a{
+  display: block;
+  text-decoration: none;
+}
+.sidenav .sidenav-center .sidenav-select-convenience table td a p{
+  margin:0;
+  font-size: 11px;
+  color:#fff;
+}
+.sidenav .sidenav-center .sidenav-select-convenience table td a img{
+  width:50%;
+  height: 50%;
+}
+.switched{
+  background: #00a8ff!important;
+  color:#fff!important;
+}
 
 
 

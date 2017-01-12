@@ -10,11 +10,11 @@
 	<!--公共样式-->
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 	<!--sidenav侧边栏样式-->
-	<link rel="stylesheet" href="./css/sidenav.css" type="text/css">
-	<!--sidenav侧边栏@media样式-->
-	<link rel="stylesheet" href="./css/example.css" type="text/css">
+	<link type="text/css" rel="stylesheet" href="./css/sidenav.css" >
 	<!--city样式-->
-	<link rel="stylesheet" href="./css/city.css" type="text/css">
+	<link type="text/css" rel="stylesheet" href="./css/city.css" >
+	<!--sidenav侧边栏@media样式-->
+	<link type="text/css" rel="stylesheet" href="./css/media.css" >
 	<!--地图加载-->
 	<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=5feca9bb1cd73e27d1465f4c2600c807"></script>
 	<script type="text/javascript" src="./js/jquery.js"></script>
@@ -34,9 +34,9 @@
 				<span class="search-icon"><img src="./img/search-icon.png"></span>		
 			</div>
 			<div class="sidenav-switch">
-				<div class="switch-toponymy">地名查询</div><div class="switch-convenience">便民查询</div>
+				<div class="switch-toponymy switched">地名查询</div><div class="switch-convenience">便民查询</div>
 			</div>
-			<div class="sidenav-select">
+			<div class="sidenav-select-toponymy" >
 				<div class="select-classify">
 					<input class="classify-input" type="text" placeholder="选择分类">
 					<div class="classify-toponymy">
@@ -67,6 +67,51 @@
 				<div class="select-city" id="city" >
 					<input class="city-input" type="text" id="_city" placeholder="选择城市" />
 				</div>
+			</div>
+			<div class="sidenav-select-convenience" style="display: none;">
+				<table>
+					<tbody>
+						<tr>
+							<td><a href=""><img src="./img/community-service.png"><p>社区服务</p></a></td>
+							<td><a href=""><img src="./img/beadhouse.png"><p>居家养老</p></a></td>
+							<td><a href=""><img src="./img/social-assistance.png"><p>社会救助</p></a></td>
+							<td><a href=""><img src="./img/mission.png"><p>慈善机构</p></a></td>
+						</tr>
+						<tr>
+							<td><a href=""><img src="./img/avoidance-point.png"><p>避灾点</p></a></td>
+							<td><a href=""><img src="./img/marriage.png"><p>婚姻登记</p></a></td>
+							<td><a href=""><img src="./img/ancient-city.png"><p>千年古县</p></a></td>
+							<td><a href=""><img src="./img/welfare-lottery.png"><p>福利彩票</p></a></td>
+						</tr>
+						<tr>
+							<td><a href=""><img src="./img/hospital.png"><p>医院诊所</p></a></td>
+							<td><a href=""><img src="./img/wc.png"><p>公共厕所</p></a></td>
+							<td><a href=""><img src="./img/passwnger-station.png"><p>客运车站</p></a></td>
+							<td><a href=""><img src="./img/hotel.png"><p>酒店住宿</p></a></td>
+						</tr>
+						<tr>
+							<td><a href=""><img src="./img/delicious-food.png"><p>餐饮美食</p></a></td>
+							<td><a href=""><img src="./img/recreation.png"><p>休闲娱乐</p></a></td>
+							<td><a href=""><img src="./img/shopping.png"><p>品牌购物</p></a></td>
+							<td><a href=""><img src="./img/baby-care.png"><p>婴儿用品</p></a></td>
+						</tr>
+						<tr>
+							<td><a href=""><img src="./img/gift.png"><p>鲜花礼品</p></a></td>
+							<td><a href=""><img src="./img/an-electric-appliance.png"><p>家用电器</p></a></td>
+							<td><a href=""><img src="./img/furniture.png"><p>家居装饰</p></a></td>
+							<td><a href=""><img src="./img/office.png"><p>办公用品</p></a></td>
+						</tr>
+						<tr>
+							<td><a href=""><img src="./img/welfare-centre.png"><p>福利院</p></a></td>
+							<td><a href=""><img src="./img/scenic-spot.png"><p>旅游景色</p></a></td>
+							<td><a href=""><img src="./img/atm.png"><p>银行ATM</p></a></td>
+							<td><a href=""><img src="./img/specialty.png"><p>土特产</p></a></td>
+						</tr>
+						<tr>
+							<td><a href=""><img src="./img/books.png"><p>图书影像</p></a></td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</div>
@@ -100,6 +145,20 @@
 	$("#_city").click(function (e) {
 		SelCity(this,e);
 	});
+	//地名查询与便民查询切换
+	$(".sidenav-switch div").click(function(){
+				var className=$(this).attr("class");
+				if (className=="switch-toponymy") {
+					$(".sidenav-select-toponymy").css("display","block");
+					$(".sidenav-select-convenience").css("display","none");	
+				}else{
+				  $(".sidenav-select-toponymy").css("display","none");
+				  $(".sidenav-select-convenience").css("display","block");
+				}
+				$(".sidenav-switch div").removeClass("switched");
+				$(this).addClass("switched");
+	});
+
 	</script>
 </body>
 </html>

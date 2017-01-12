@@ -49,10 +49,10 @@ var Iput = {
         $c.frameBorder = "0";
         $c.style.width = "0px";
         $c.style.height = "0px";
-        $c.style.position = 'absolute';
+        $c.style.position = '';
         $b.setAttribute('id', Iput.confg.idBox);
         $b.setAttribute('align', 'left');
-        $b.style.position = 'absolute';
+        $b.style.position = '';
         $b.style.background = 'transparent';
         $b.style.zIndex = '20000';
         if ($a) {
@@ -77,6 +77,8 @@ var Iput = {
     drice: function (e) {
         var bodyHith = Iput.confg.bodyHeight == 0 ? document.getElementById("city").scrollHeight : Iput.confg.bodyHeight;
         var bodywidth = Iput.confg.bodyWidth == 0 ? document.getElementById("city").scrollWidth : Iput.confg.bodyWidth;
+        console.log(bodywidth);
+        console.log(bodyHith);
         if (!e) e = window.event;
         var top = 0, left = 0;
         var a = Iput.get(Iput.confg.idBox);
@@ -88,7 +90,9 @@ var Iput = {
         var sl = 0;
         if (Iput.confg.soll != null) {
             st = document.getElementById(Iput.confg.soll).scrollTop;
+            console.log(st);
             sl = document.getElementById(Iput.confg.soll).scrollLeft;
+            console.log(st);
         }
         if (Iput.get(Iput.confg.idIframe)) {
             if (Iput.confg.hand == "1") {

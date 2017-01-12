@@ -1,0 +1,62 @@
+@media screen and (min-width: 800px) {
+	.sidenav {
+		width: 33%;
+	}
+	.sidenav-brand span{
+		font-size: 16px;
+	} 
+}
+@media screen and (min-width: 1024px) {
+	.sidenav {
+		width: 27%;
+	}
+	.sidenav-brand span{
+		font-size:16px;
+		
+	} 
+}
+@media screen and (min-width: 1280px) {
+	.sidenav {
+		width: 22%;
+	}
+	.sidenav-brand span{
+		
+	} 
+}
+@media screen and (min-width: 1360px) {
+	.sidenav-brand span{
+		
+	}
+}
+@media screen and (min-width: 1366px) {
+	.sidenav-brand span{
+		-moz-font-size: 20px;
+		-webkit-font-size: 18px;
+		font-size: 18px;
+	}
+}
+@media screen and (min-width: 1400px) {
+	.sidenav-brand span{
+
+	}
+}
+@media screen and (min-width: 1440px) {
+	.sidenav-brand span{
+
+	}
+}
+@media screen and (min-width: 1600px) {
+	.sidenav-brand span{
+		font-size: 20px;
+	}
+}
+@media screen and (min-width: 1680px) {
+	.sidenav-brand span{
+
+	}
+}
+@media screen and (min-width: 1920px) {
+	.sidenav-brand span{
+		font-size: 26px;
+	}
+}
